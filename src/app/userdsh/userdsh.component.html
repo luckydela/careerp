@@ -1,0 +1,181 @@
+
+      <!-- End Navbar -->
+      
+      
+          <!-- <div class="content" >
+            <div class="container-fluid">
+               -->
+    
+<!--               
+                <div class="row"> 
+                    <div class="col-lg-1 col-md-6 col-sm-6 ">
+
+                    </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-6 ">
+                  <div class="card card-stats systeam">
+                    <div class="card-header card-header-warning card-header-icon" >
+                     <br><b></b>
+                      <a><h3 class="card-title" Style="color:rgb(233, 237, 241)"> Apply to join the team</h3></a>
+                      <h4 class="card-title" align="justify">Apply to be Staff Read instructions and ensure you have all required information available</h4>
+                      <!--<h3 class="card-title" *ngIf="loading">loading ...</h3>-->
+                    <!-- </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <i class="material-icons text-info">info</i>
+                        <button type="submit" class="btn btn-sm btn-danger" (click)="applyecl()"> Continue Application</button>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6 "></div>
+                
+    
+                <div class="col-lg-4 col-md-6 col-sm-6 ">
+                  <div class="card card-stats salesteam">
+                    <div class="card-header card-header-danger card-header-icon">
+                        <br><b></b>
+                        <a><h3 class="card-title"  Style="color:rgb(233, 237, 241);">Make Enquiries and report problems</h3></a>
+                        <h4 class="card-title" align="justify">Active Support System ready to help answer all your questions and to address any problem you may be facing.</h4>
+                      </div>
+                    <div class="card-footer">
+                      <div class="stats">
+                        <i class="material-icons">local_offer</i> 
+                        <button type="submit" class="btn btn-sm btn-danger" (click)="contacthr()">Contact Support</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> --> 
+    
+<!--     
+            </div>
+          </div> -->
+         
+
+
+    <div class="row">
+        <div class="col-md-2">
+       
+          </div>
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header personal">
+            <h4 class="card-title" Style="color:rgb(124, 174, 224);">Personal Information Profile</h4>
+            <p class="card-category" Style="color:rgb(255, 255, 255);">Complete your Personal information</p>
+          </div>
+          <div class="card-body">
+            <form [formGroup]="personadetail">
+              <div class="row">
+                
+           
+                <div class="col-md-7">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Position applying for</label>
+                    <select class="form-control"  formControlName="positionfor" placeholder="Position applying for" id="sel1">
+                      <option>Finance Officer</option>
+                      <option value="">Systems Engineer</option>
+                      <option>Software Developer</option>
+                      <option value="">Sales Executive</option>
+                      <option value="">Human Resource Assistant</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">last name</label>
+                    <input type="text"  id="firstname" formControlName="lname"  class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">first name</label>
+                    <input type="text" id="lastname" formControlName="fname" class="form-control">
+                  </div>
+                </div>            
+              </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Home Address</label>
+                    <input type="text" id="haddress" formControlName="had" class="form-control">
+                  </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                      <label class="bmd-label-floating">Digital Address</label>
+                      <input type="text" id="haddress" formControlName="dad" class="form-control">
+                    </div>
+                  </div>
+
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Phone eg. +233...</label>
+                      <input type="text" formControlName="phne" class="form-control">
+                      <h5 *ngIf="personadetail.get('phne').hasError('pattern')">Enter a valid number</h5>
+                  </div>
+                </div>
+              </div>
+            
+              <br><br>
+              <div class="row">
+                <div class="col-md-12">
+                <div class="forma-control">
+                <textarea name="" formControlName="aboutu" id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
+                  </div>
+                </div>
+              </div>
+              <br><br><br>
+              <button type="submit" class="btn btn-danger btn-sm" [disabled]="!personadetail.valid" (click)="submitall()">Submit your information
+                  <i class="material-icons text-info">double_arrow</i>
+                </button>
+              <div class="clearfix"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-2"></div>
+     
+    </div>
+
+
+<!------------------------------ support flag exist here--------------- -->
+
+
+<!-- <div class="row" *ngIf="info"> 
+    <div class="col-md-3">
+       
+      </div>
+  <div class="col-md-6">
+    <div class="card">
+      
+      <div class="card-body">
+       <h3 align="center">Enterprise Computing Career </h3>
+       <h5 align="center">Inquire from us by sending us a mail </h5>
+       <h5 align="center">
+          204 Pawpaw St. Comm. 6 
+          Tema, Greater Accra, Ghana.<br>
+          <a href="mailto:enquiries@entcomputing.com">hr@entcomputing.com</a> <br>
+          <a href="tel:+233387031918"> +233 50 604 5005</a>
+       </h5>
+       <p align="center" class="card-category">Make us aware of any Issues you face using this career Portal
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+   
+  </div>
+
+</div>
+ -->
+
+ 
+
+

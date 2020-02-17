@@ -1,0 +1,20 @@
+/* .fixed-top{
+    box-shadow: 1px 0px 0px 1px rgba(12, 134, 255, 0.333);
+      /* margin-left: 200px; */
+      /* position: fixed;
+      top: 0;
+      width: 100%;
+} */ 
+
+
+.layout {
+  width: 100%;
+  /* background: #dfdddd; */
+  height: 100vh; 
+  background: url(/assets/img/bgd.jpg) no-repeat center center/cover;
+}
+.content {
+  margin: 30px;
+}
+
+

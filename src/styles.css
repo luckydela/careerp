@@ -1,1 +1,179 @@
 /* You can add global styles to this file, and also import other style files */
+/* .wrapper{
+    background: #2eaaee;
+} */
+
+
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --background:rgba(42,67,101,0.35) ;
+    --overlay:rgba(24,39,51,0.85);
+    --primary-color: #2a353d; 
+    /* --secondary-color: #32a2fd;  */
+    --danger-color: #9b2c2c;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background: var(--primary-color);
+    color: #999;
+}
+
+ul {
+    list-style: none;
+}
+h1, h2, h3, h4 {
+    color: #fff;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+p {
+    margin: 0.5rem 0;
+}
+img {
+    width: 100%;
+}
+
+
+/* custom styles */
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    padding: 0.4rem 1.3rem;
+    font-size: 1rem;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    outline: none;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 2px;
+}
+.btn-primary {
+    background: var(--primary-color);
+}
+.btn-danger {
+    background: var(--danger-color);
+}
+.btn:hover {
+    opacity: 0.9;
+}
+.btn-rounded {
+    border-radius: 5px;
+}
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+.btn-xl {
+    font-size: 2rem;
+    padding: 1.5rem 2.1rem;
+    text-transform: uppercase;
+}
+.btn-lg {
+    font-size: 1rem;
+    padding: 0.8rem 1.3rem;
+    text-transform: uppercase;
+}
+
+.form-group {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    text-align: center;
+    margin: 10px;
+}
+input {
+    padding: 0.7rem;
+    border: transparent;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #eff3f6;
+    color: #939798;
+    margin: 20px;
+    width: 100%;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #E2E8F0;
+    background: #fff;
+    margin: 10px;
+}
+::placeholder {
+    color: #999;
+    font-size: 15px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    height: auto;
+    padding: 20px;
+    font-weight: 700;
+    line-height: 10px;
+    font-size: 12px;
+    border-radius: 5px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;  
+    align-items: center;
+    padding-top: 20px;
+}
+
+.card-footer {
+    padding: 10px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary-color);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    color: #fff;
+}
+nav .logo {
+    /* width: 250px;
+    height: 50px; */
+    display: flex;
+    align-items: center;
+}
+nav img {
+    width: 50px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
+.logout {
+    cursor: pointer;
+    margin-right: 20px;
+}
+.logout {
+    background-color: #ffffff;
+    border: 2px solid #dfc3ae;
+    padding: 10px;
+    color: #ff9600;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-left: 10px;
+    cursor: pointer;
+}

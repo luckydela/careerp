@@ -1,0 +1,64 @@
+<div class="content">
+  <div class="container-fluid">
+      <div class="row">
+<div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="card">
+              <div class="card-header">
+                <h4 class="card-title ">New Applicant</h4>
+                <p class="card-category">View New Applicant here</p>
+              </div>
+              <div class="card-body">
+                  <div class=" form-inline active-cyan active-cyan-2 md-form mt-0 search">
+                      <input class="form-control" type="text" placeholder="Search by Anything" #query (keyup)="search(query.value)" aria-label="Search">
+                    </div>
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text">
+                      <th>#</th>
+                      <th>ID</th>
+                      <th>First name</th>
+                      <th>Last name</th>
+                      <th>Age</th>
+                      <th>Gender</th>
+                      <th>Res.Address</th>
+                      <th>Post.Address</th>
+                      <th>Digital Address</th>
+                      <th>Phone No.</th>
+                      <th>CV</th>
+                      <th>Certificate</th>
+                      <th>Photo</th>
+                      <th>Description</th>
+                      <th>Date-Created</th>
+                    </thead>
+                    <tbody>
+                         <tr *ngFor="let applicnt of searchdata ; let i=index;" >
+                          
+                            <td>{{i+1}}</td>
+                            <td>{{applicnt.user_id}}</td>
+                            <td>{{applicnt.first_name}}</td>
+                            <td>{{applicnt.last_name}}</td>
+                            <td>{{applicnt.age}}</td>
+                            <td>{{applicnt.gender}}</td>
+                            <td>{{applicnt.res_address}}</td>
+                            <td>{{applicnt.postal_address}}</td>
+                            <td>{{applicnt.digital_address}}</td>
+                            <td>{{applicnt.phone}}</td>
+                            <td>{{applicnt.cv_name}}</td> 
+                            <td>{{applicnt.certificate_name}}</td>
+                            <td>{{applicnt.photo_name}}</td> 
+                            <td>{{applicnt.description}}</td>
+                            <td>{{applicnt.date_created}}</td>                 
+                           </tr>
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-1"></div>
+        </div>
+  </div>
+</div>

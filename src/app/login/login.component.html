@@ -1,0 +1,68 @@
+
+
+
+
+
+
+<body>
+
+  <video autoplay muted loop id="myVideo">
+      <source src="assets/img/discus.mp4" type="video/mp4">
+        
+    </video>
+
+  <div class=" sidenav">
+    <div class="login-main-text">
+        <h2 class="card-title" align="center"> Enterprise Computing Career</h2>
+        <h3 class="card-title" align="center"> The team can't wait to meet you!</h3>
+
+
+        <img class="img" src="assets/img/logo.png" Style="height: 100px; width: 250px;" />
+
+
+       
+
+    </div>
+ </div>
+ <div class=" main">
+    <div class="col-md-5 col-sm-12">
+      <div class=" logincard">
+   <div class=" animated tada" >
+     <!-- <h6 class="card-category text-gray" align="center">smartCover</h6>-->
+     
+      <div class="card-body">
+       
+          <h3 align="center" Style="color:#2aea;">Portal Login </h3>
+
+            <form (ngSubmit)="login()" #f="ngForm">
+                <div class="form-group">
+                  <label class="bmd-label-floating"> Email</label>
+                  <input type="email" class="form-control" name="em" [(ngModel)]="usr.email" required>
+                </div>
+
+                <br><br>
+              
+                  <div class="form-group">
+                    <label class="bmd-label-floating">Password</label>
+                    <input type="password" class="form-control" id="pwd" name="pwd" [(ngModel)]="usr.password" required>
+                  </div>
+                  <br><br>
+        
+                 <button type="submit" class="btn btn-round btn-block" (click)="login()" [disabled]="!f.valid">LogIn</button>
+                 <!--<a href="" align="center">Create Account Here</a>-->
+                
+      </form>
+       
+      
+    </div>
+   </div>
+  </div>
+    </div>
+ </div>
+
+ </body>
+
+
+
+
+

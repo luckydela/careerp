@@ -1,0 +1,29 @@
+/* Set a background image by replacing the URL below */
+
+.container-fluid{
+   /* padding: 150px; */
+}
+
+
+
+.systeam{
+    background: #da7e41;
+}
+.devteam{
+    background: #dbaa3f;
+}
+.salesteam{
+    background: #3fbcdb; 
+}
+.hrteam{
+    background: #883fdb; 
+}
+.accteam{
+    background: #db3f4c; 
+}
+.proteam{
+    background: #db8a3f; 
+}
+
+
+

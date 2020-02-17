@@ -1,0 +1,96 @@
+<br><br>
+<div class="content">
+  <div class="container-fluid">
+
+ 
+
+<div class="row">
+    <div class="col-md-4">
+
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header card-header">
+          <h4 class="card-title "> Department </h4>
+          <p class="card-category">Register department here</p>
+        </div>
+        <div class="card-body">
+          <form [formGroup]="regdptform">
+              <div class="range-form">
+                  <div class="range">
+                      <input type="number"  placeholder="Number to be hired"   formControlName="noofhire" class="form-control">
+                    </div>
+                    <br>
+                <div class="range">
+               <div class="form-group">
+                  <select class="form-control"  formControlName="dptnm" placeholder="Department" id="sel1">
+                    <option>Finance</option>
+                    <option value="">Systems and Hardwares</option>
+                    <option>Software Developement</option>
+                    <option value="">Sales and Technical</option>
+                    <option value="">Human Resource</option>
+                  </select>
+                </div>
+                </div>
+                  
+              </div>
+              <div class="range-btn">
+                <button type="submit" class="btn btn-round btn-danger" (click)="addDpt()">
+                  Add department
+                </button>
+                <button type="submit" class="btn btn-round " (click)="cancelfn()">
+                  Cancel
+                </button>
+              </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-2"></div>
+                <div class="col-md-8">
+                  <div class="card">
+                    <div class="card-header">
+                      <h4 class="card-title ">Human Resource Request Pool</h4>
+                      <p class="card-category">View hire request here</p>
+                    </div>
+                    <div class="card-body">
+                        <div class=" form-inline active-cyan active-cyan-2 md-form mt-0 search">
+                            <input class="form-control" type="text" placeholder="Search by Anything" #query (keyup)="search(query.value)" aria-label="Search">
+                          </div>
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead class=" text">
+                            <th>#</th>
+                            <th>Department Name</th>
+                            <th>Number to-be hired</th>
+                            <th>Date-Created</th>
+                            <th>Date-Updated</th>
+                          </thead>
+                          <tbody>
+                             <tr *ngFor="let department of searchdata ; let i=index;">
+                                
+                                  <td>{{i+1}}</td>
+                                  <td>{{department.department_name}}</td>
+                                  <td>{{department.number_available}}</td>
+                                  <td>{{department.date_added}}</td>
+                                  <td>{{department.date_updated}}</td>  
+                                 </tr>
+                            
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+                <div class="col-md-2"></div>
+              </div>
+
+</div>
+</div>
