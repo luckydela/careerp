@@ -62,8 +62,8 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-header personal">
-            <h4 class="card-title" Style="color:rgb(124, 174, 224);">Personal Information Profile</h4>
-            <p class="card-category" Style="color:rgb(255, 255, 255);">Complete your Personal information</p>
+            <h4 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h4>
+            <!-- <p class="card-category" Style="color:rgb(66, 155, 245);" align="center">Complete your Personal information</p> -->
           </div>
           <div class="card-body">
             <form [formGroup]="personadetail">
@@ -132,7 +132,7 @@
               </div>
               <br><br><br>
               <button type="submit" class="btn btn-danger btn-sm" [disabled]="!personadetail.valid" (click)="submitall()">Submit your information
-                  <i class="material-icons text-info">double_arrow</i>
+                  <i class="material-icons">double_arrow</i>
                 </button>
               <div class="clearfix"></div>
             </form>
