@@ -1,7 +1,25 @@
-.wrapper{
+/* .wrapper{
     background: #2aea;
 }
 
 .nnn{
     background: #2aea;
-}
+} */
+
+.navbar-wrapper {
+    /* width: 100%;
+    /* background: #dfdddd; */
+   /* height: 100vh;  */
+     background: url(/assets/img/icon.png) no-repeat; 
+  }
+  .content {
+    margin: 30px;
+  }
+
+  .nav-link{
+    cursor:pointer;
+  }
+
+  .dropdown{
+    
+  }

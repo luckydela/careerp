@@ -29,7 +29,7 @@ export class AdminnavComponent implements OnInit {
   
     logout(){  
       window.localStorage.clear();
-      this.router.navigate(['ecl@hrlogin']);
+      this.router.navigate(['eclhradmin']);
   
   }
 }

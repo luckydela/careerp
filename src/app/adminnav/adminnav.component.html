@@ -1,12 +1,12 @@
 <br><br><br>
     <!-- End Navbar -->
     
-    <nav class="nav navbar-expand-lg fixed-top ">
+    <nav class="navbar-expand-lg fixed-top " style="background:#0e0f0f;">
       <div class="container-fluid">
         <div class="navbar-wrapper">
-          <img src="assets/img/logo.png" alt="" style="height: 50px; width: 100px;"><br>
-          <a class="navbar-brand text-danger">Career Dashboard</a> <!-- href="#pablo"-->
-        </div>
+         <img src="assets/img/icon.png" alt="">
+          <a class="navbar-brand text-danger" style="">Career Dashboard</a>
+          </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
           <span class="sr-only">Toggle navigation</span>
           <span class="navbar-toggler-icon icon-bar"></span>
@@ -14,7 +14,7 @@
           <span class="navbar-toggler-icon icon-bar"></span>
         </button>
     
-        <div class=" navbar-collapse justify-content-end">
+        <div class=" navbar-collapse justify-content-end" style="margin-top:-35px;">
          
           <ul class="navbar-nav">
               <button type="submit" class="btn btn-sm" (click)="newApplicant()">View Applicant</button>
@@ -22,7 +22,7 @@
             <button type="submit" class="btn btn-sm" (click)="addJob()">Request Starter</button>
 
             <li class="nav-item dropdown">
-                <a class="nav-link" href="#pablo" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link" id="navbarDropdownProfile" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <i class="material-icons">person</i>
                   <p class="d-lg-none d-md-block">
                     Account
@@ -38,6 +38,7 @@
         </div>
       </div>
     </nav>
+    <br> <br>
 
     <router-outlet></router-outlet>
 

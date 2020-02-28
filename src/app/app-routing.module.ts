@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { DptComponent } from './dpt/dpt.component';
-import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserdshComponent } from './userdsh/userdsh.component';
 import {AuthGuard} from './service/authguard';
@@ -24,12 +23,11 @@ const routes: Routes = [
   ]
 },
 
-  {path:'ecl@hrlogin', component: LoginComponent},
+  {path:'eclhradmin', component: LoginComponent},
   {path: '', component: AdminnavComponent,
    canActivateChild: [AuthGuard],
     children:[
       {path: 'adminuser@ecl', component: NewapplicantComponent},
-      {path: 'admindsh', component: AdminComponent},
       {path:'profile', component: ProfileComponent},
       {path:'addjob',  component:AddjobComponent },
                  
@@ -46,5 +44,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routeComponent = [LandingComponent,DptComponent, LoginComponent,TopnavComponent, AdminnavComponent,
-   AdminComponent, ProfileComponent, UserdshComponent, NewapplicantComponent, AddjobComponent
+    ProfileComponent, UserdshComponent, NewapplicantComponent, AddjobComponent
    ]
