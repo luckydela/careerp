@@ -14,7 +14,7 @@ export class LandingComponent implements OnInit {
   }
 
   getStarted(){
-    this.router.navigate(['/user'])
+    this.router.navigate(['/user']);
   }
 
 }

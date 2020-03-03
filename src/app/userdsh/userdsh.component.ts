@@ -46,7 +46,6 @@ export class UserdshComponent implements OnInit {
 
   ngOnInit() {
     this.userdata=JSON.parse(localStorage.getItem('userdata'));
-
   }
 
 
