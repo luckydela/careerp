@@ -13,3 +13,5 @@ export class PhotoimageComponent implements OnInit {
   }
 
 }
+
+ 
