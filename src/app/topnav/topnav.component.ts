@@ -15,6 +15,6 @@ export class TopnavComponent implements OnInit {
 
 
   backpage(){
-    this.router.navigateByUrl('https://www.entcomputing.com')
+    this.router.navigate(['']);
   }
 }

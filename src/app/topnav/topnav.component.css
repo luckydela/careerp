@@ -8,6 +8,7 @@
 
 
 .layout {
+  overflow: hidden;
   width: 100%;
   /* background: #dfdddd; */
   height: 100vh; 
@@ -15,6 +16,10 @@
 }
 .content {
   margin: 30px;
+}
+.Back{
+  cursor: pointer;
+  margin-right: 40px; 
 }
 
 
