@@ -14,6 +14,7 @@ import { AddjobComponent } from './addjob/addjob.component';
 import { CvComponent } from './cv/cv.component';
 import { CertComponent } from './cert/cert.component';
 import { PhotoimageComponent } from './photoimage/photoimage.component';
+import {SidenavComponent} from './sidenav/sidenav.component'
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { PhotoimageComponent } from './photoimage/photoimage.component';
     CvComponent,
     CertComponent,
     PhotoimageComponent,
+    SidenavComponent
   ],
 
 

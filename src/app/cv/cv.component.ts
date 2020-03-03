@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CvComponent implements OnInit {
 
+
+
+
   constructor() { }
 
   ngOnInit() {

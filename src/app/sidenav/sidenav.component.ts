@@ -14,7 +14,7 @@ export class SidenavComponent implements OnInit {
   ngOnInit() {
   }
 
-  userdsh(){
-    this.router.navigate(['./sidenav/user']);
-  }
+  // userdsh(){
+  //   // this.router.navigate(['./sidenav/user']);
+  // }
 }

@@ -75,4 +75,8 @@ export class AddjobComponent implements OnInit {
     
   }
 
+  cancelfn(){
+    
+  }
+
 }
