@@ -44,7 +44,7 @@
                             <td>{{applicnt.postal_address}}</td>
                             <td>{{applicnt.digital_address}}</td>
                             <td>{{applicnt.phone}}</td>
-                            <td>{{applicnt.cv_name}}</td> 
+                            <td id="file" (click)="opendocument(applicnt.cv_name)">{{applicnt.cv_name}}</td> 
                             <td>{{applicnt.certificate_name}}</td>
                             <td>{{applicnt.photo_name}}</td> 
                             <td>{{applicnt.description}}</td>
