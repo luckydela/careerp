@@ -62,18 +62,16 @@
       <div class="col-md-8">
         <div class="card">
           <div class="card-header personal">
-            <h1 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h1>
+            <h2 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h2>
             <!-- <p class="card-category" Style="color:rgb(66, 155, 245);" align="center">Complete your Personal information</p> -->
           </div>
           <div class="card-body">
             <form [formGroup]="personadetail">
-              <div class="row">
-                
-           
+              <div class="row">               
                 <div class="col-md-7">
                   <div class="form-group">
                     <label class="bmd-label-floating">Position applying for</label>
-                    <select class="form-control"  formControlName="positionfor" placeholder="Position applying for" id="sel1">
+                    <select class="form-control" formControlName="positionfor" placeholder="Position applying for" id="sel1">
                       <option value="">Finance Officer</option>
                       <option value="">Systems Engineer</option>
                       <option value="">Software Developer</option>
@@ -86,13 +84,13 @@
               <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="bmd-label-floating">last name</label>
+                    <!-- <label class="bmd-label-floating">last name</label> -->
                     <input type="text"  id="firstname" formControlName="lname" placeholder="Firstname"  class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label class="bmd-label-floating">first name</label>
+                    <!-- <label class="bmd-label-floating">first name</label> -->
                     <input type="text" id="lastname" formControlName="fname" placeholder="Lastname" class="form-control">
                   </div>
                 </div>            
@@ -101,22 +99,22 @@
             <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Home Address</label>
+                    <!-- <label class="bmd-label-floating">Home Address</label> -->
                     <input type="text" id="haddress" formControlName="had" placeholder="Home Address" class="form-control">
                   </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
-                      <label class="bmd-label-floating">Digital Address</label>
+                      <!-- <label class="bmd-label-floating">Digital Address</label> -->
                       <input type="text" id="haddress" formControlName="dad" placeholder="Digital Address" class="form-control">
                     </div>
                   </div>
 
                 <div class="col-md-4">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Phone eg. +233...</label>
-                      <input type="text" formControlName="phne" class="form-control">
+                    <!-- <label class="bmd-label-floating">Phone eg. +233...</label> -->
+                      <input type="text" formControlName="phne" class="form-control" placeholder="Phone eg. +233...">
                       <h5 *ngIf="personadetail.get('phne').hasError('pattern')">Enter a valid number</h5>
                   </div>
                 </div>

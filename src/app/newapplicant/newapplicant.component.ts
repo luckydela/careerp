@@ -30,4 +30,8 @@ search (query: string){
  this.searchdata = (query) ?this.applicant.filter( data => data.id.toLowerCase().includes(query.toLowerCase()) ||data.firstName.toLowerCase().includes(query.toLowerCase()) || data.lastName.toLowerCase().includes(query.toLowerCase()) || data.email.toUpperCase().includes(query.toUpperCase())) : this.applicant;
 }
 
+opendocument(documentname:any){
+  window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
+}
+
 }
