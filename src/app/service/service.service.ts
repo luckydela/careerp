@@ -12,7 +12,8 @@ export class ServiceService {
    //live_Url:any="https://e4b01848.ngrok.io";
    //notifyBucket: any = "/topics/com.ecl.smartcoveragent";
    //notifyUrl: any = 'https://fcm.googleapis.com/fcm/send';
-   live_Url: any = "https://ecl-web-api.herokuapp.com"
+   //live_Url: any = "https://ecl-web-api.herokuapp.com";
+   live_Url:any="https://ecl-web-api.herokuapp.com";
   
 
 
@@ -40,9 +41,9 @@ export class ServiceService {
     headers: this.httpHeaders
    };
 
-   private smsoptions = {
-    headers: this.smshttpHeaders
-   };
+  //  private smsoptions = {
+  //   headers: this.smshttpHeaders
+  //  };
 
 
 
@@ -77,6 +78,10 @@ return this.http.post(this.live_Url+'/api/submit_applications',formData, this.op
 
   getDepartment(email){
     return this.http.post(this.live_Url+'/api/get_positions',({email:email}),this.options)
+  }
+//filePath:any;
+  showFileName(email){
+    return this.http.post(this.live_Url+'/api/load-image/',({email:email}),this.options)
   }
 
    addHire(email){
