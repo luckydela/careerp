@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit {
           localStorage.setItem('isLoggedInStatus', JSON.stringify(data['profile'][0]));
           localStorage.setItem('userdata',JSON.stringify(data['profile'][0]));
             //console.log(data);
-            this.router.navigate(['/adminuser@ecl'])
+            this.router.navigate(['/profile'])
          
        } 
        else if(data['responseCode']==='W1012'){
