@@ -5,54 +5,73 @@
  
      <div class="row">
        <div class="col-md-2"></div>
-       <div class="col-md-8">
+
+       <div class="col-md-2 col-lg-2">
+        <div class="card card-profile">
+          <div class="card-avatar">
+            <a href="#pablo">
+              <img class="img" src="../assets/img/user-vector.jpg"/>
+            </a>
+          </div>
+          <div class="card-body">
+            <h5 class="card-category" style="color:rgb(2, 9, 14);"> HR. Admin Manager</h5>
+            <h3 class="card-title"> {{userdata.last_name}} {{userdata.first_name}}</h3>
+            <!-- <p class="card-description">
+              Member of Board of Directors for this Insurance Company
+            </p> -->
+          </div>
+        </div>
+      </div>
+
+
+       <div class="col-md-6">
          <div class="card">
            <div class="card-header">
-             <h4 class="card-title">Edit Profile</h4>
-             <p class="card-category">Complete your profile</p>
+             <h3 class="card-title">Administrator Profile</h3>
+             <!-- <p class="card-category">Complete your profile</p> -->
            </div>
            <div class="card-body">
              <form>
                <div class="row">
-                 <div class="col-md-5">
+                 <div class="col-md-12">
                    <div class="form-group">
-                     <label class="bmd-label-floating">Email (disabled)</label>
+                     <!-- <label class="bmd-label-floating">Email (disabled)</label> -->
                      <input type="text"id="company"   value="{{userdata.email}}" class="form-control" disabled>
                    </div>
                  </div>
              
-                 <div class="col-md-7">
+                 <!-- <div class="col-md-7">
                    <div class="form-group">
                      <label class="bmd-label-floating">Phone number</label>
                      <input type="email" id="phne"  value="" class="form-control">
                    </div>
-                 </div>
+                 </div> -->
                </div>
                <div class="row">
                  <div class="col-md-4">
                    <div class="form-group">
-                     <label class="bmd-label-floating">First Name</label>
-                     <input type="text"  id="firstname" value="{{userdata.first_name}}" class="form-control">
+                     <!-- <label class="bmd-label-floating">First Name</label> -->
+                     <input type="text"  id="firstname" value="{{userdata.first_name}}" placeholder="First Name" class="form-control">
                    </div>
                  </div>
 
                  <div class="col-md-4">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Last Name</label>
-                    <input type="text"  id="lasttnme" value="{{userdata.last_name}}" class="form-control">
+                    <!-- <label class="bmd-label-floating">Last Name</label> -->
+                    <input type="text"  id="lasttnme" value="{{userdata.last_name}}" placeholder="Last Name" class="form-control">
                   </div>
                 </div>
 
                  <div class="col-md-4">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Position</label>
-                    <input type="text"  id="pass" value="{{userdata.position}}" class="form-control" disabled>
+                    <!-- <label class="bmd-label-floating">Position</label> -->
+                    <input type="text"  id="pass" value="{{userdata.position}}" placeholder="Position" class="form-control" disabled>
                   </div>
                 </div>
 
                </div>
          
-               <button type="submit" class="btn btn-sm pull-right">Update Profile</button>
+               <button type="submit" class="btn btn-sm pull-right">Reset Password</button>
                <div class="clearfix"></div>
              </form>
            </div>

@@ -27,7 +27,7 @@ export class NewapplicantComponent implements OnInit {
 
 
 search (query: string){
- this.searchdata = (query) ?this.applicant.filter( data => data.id.toLowerCase().includes(query.toLowerCase()) ||data.firstName.toLowerCase().includes(query.toLowerCase()) || data.lastName.toLowerCase().includes(query.toLowerCase()) || data.email.toUpperCase().includes(query.toUpperCase())) : this.applicant;
+ this.searchdata = (query) ?this.applicant.filter( data => data.user_id.toLowerCase().includes(query.toLowerCase()) ||data.last_name.toLowerCase().includes(query.toLowerCase()) ||data.first_name.toLowerCase().includes(query.toLowerCase()) ||data.gender.toLowerCase().includes(query.toLowerCase()) || data.phone.toLowerCase().includes(query.toLowerCase()) || data.cv_name.toUpperCase().includes(query.toUpperCase())) : this.applicant;
 }
 
 opendocument(documentname:any){

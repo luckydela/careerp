@@ -20,6 +20,10 @@
     cursor:pointer;
   }
 
-  .dropdown{
-    
-  }
+  
+  a.dropdown-item:hover{
+    color: #fff;
+    /* background: #4AA8EE; */
+    background: rgb(2, 9, 14);
+    cursor: pointer;
+    }

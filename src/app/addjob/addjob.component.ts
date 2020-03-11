@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ServiceService } from '../service/service.service';
 import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms';
+import {NewapplicantComponent} from '../newapplicant/newapplicant.component';
 import swal from 'sweetalert2';
 
 @Component({
@@ -11,6 +12,8 @@ import swal from 'sweetalert2';
 })
 export class AddjobComponent implements OnInit {
 
+  adddpt: boolean = true;
+  dptid:any ='';
   userdata; 
   dpt:any = [];
   searchdata:any=[];
@@ -76,7 +79,13 @@ export class AddjobComponent implements OnInit {
   }
 
   cancelfn(){
-    
+    //this.adddpt = false;
+    this.dptid = '';
+    this.regdptform = this.formbuilder.group({
+      noofhire: new FormControl('',[Validators.required]),
+      dptnm: new FormControl ('',[Validators.required])
+    })
+
   }
 
 }

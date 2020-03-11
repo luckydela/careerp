@@ -5,13 +5,16 @@
           <div class="col-md-10">
             <div class="card">
               <div class="card-header">
-                <h4 class="card-title ">New Applicant</h4>
-                <p class="card-category">View New Applicant here</p>
+                <h3 class="card-title " align="center">View Applicant</h3>
+                <!-- <p class="card-category">View New Applicant</p> -->
+                <div class=" form-inline active-cyan active-cyan-2 md-form mt-0 search">
+                  <input class="form-control" type="text" placeholder="Search by Anything" #query (keyup)="search(query.value)" aria-label="Search">
+                </div>
               </div>
               <div class="card-body">
-                  <div class=" form-inline active-cyan active-cyan-2 md-form mt-0 search">
+                  <!-- <div class=" form-inline active-cyan active-cyan-2 md-form mt-0 search">
                       <input class="form-control" type="text" placeholder="Search by Anything" #query (keyup)="search(query.value)" aria-label="Search">
-                    </div>
+                    </div> -->
                 <div class="table-responsive">
                   <table class="table">
                     <thead class=" text">
@@ -22,7 +25,7 @@
                       <th>Age</th>
                       <th>Gender</th>
                       <th>Res.Address</th>
-                      <th>P.Address</th>
+                      <!-- <th>P.Address</th> -->
                       <th>Dg.Address</th>
                       <th>PhoneNo.</th>
                       <th>CV</th>
@@ -41,7 +44,7 @@
                             <td>{{applicnt.age}}</td>
                             <td>{{applicnt.gender}}</td>
                             <td>{{applicnt.res_address}}</td>
-                            <td>{{applicnt.postal_address}}</td>
+                            <!-- <td>{{applicnt.postal_address}}</td> -->
                             <td>{{applicnt.digital_address}}</td>
                             <td>{{applicnt.phone}}</td>
                             <td id="filecv" (click)="opendocument(applicnt.cv_name)">{{applicnt.cv_name}}</td> 
