@@ -1,77 +1,26 @@
 
       <!-- End Navbar -->
       
-      
-          <!-- <div class="content" >
+<!--       
+           <div class="content" >
             <div class="container-fluid">
-               -->
-    
-              <!--               
-                <div class="row"> 
-                    <div class="col-lg-1 col-md-6 col-sm-6 ">
 
-                    </div>
-
-                <div class="col-lg-4 col-md-6 col-sm-6 ">
-                  <div class="card card-stats systeam">
-                    <div class="card-header card-header-warning card-header-icon" >
-                     <br><b></b>
-                      <a><h3 class="card-title" Style="color:rgb(233, 237, 241)"> Apply to join the team</h3></a>
-                      <h4 class="card-title" align="justify">Apply to be Staff Read instructions and ensure you have all required information available</h4>
-                      <!--<h3 class="card-title" *ngIf="loading">loading ...</h3>-->
-                    <!-- </div>
-                    <div class="card-footer">
-                      <div class="stats">
-                        <i class="material-icons text-info">info</i>
-                        <button type="submit" class="btn btn-sm btn-danger" (click)="applyecl()"> Continue Application</button>
-
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-6 "></div>
-                
-    
-                <div class="col-lg-4 col-md-6 col-sm-6 ">
-                  <div class="card card-stats salesteam">
-                    <div class="card-header card-header-danger card-header-icon">
-                        <br><b></b>
-                        <a><h3 class="card-title"  Style="color:rgb(233, 237, 241);">Make Enquiries and report problems</h3></a>
-                        <h4 class="card-title" align="justify">Active Support System ready to help answer all your questions and to address any problem you may be facing.</h4>
-                      </div>
-                    <div class="card-footer">
-                      <div class="stats">
-                        <i class="material-icons">local_offer</i> 
-                        <button type="submit" class="btn btn-sm btn-danger" (click)="contacthr()">Contact Support</button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div> --> 
-    
-            <!--     
-            </div>
-          </div> -->
-         
-
-
-    <div class="row">
+    <div class="row" *ngIf="persona">
         <div class="col-md-2">
        
           </div>
       <div class="col-md-8">
         <div class="card">
-          <div class="card-header personal">
+          <div class="card-header ">
             <h2 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h2>
-            <!-- <p class="card-category" Style="color:rgb(66, 155, 245);" align="center">Complete your Personal information</p> -->
           </div>
           <div class="card-body">
             <form [formGroup]="personadetail">
               <div class="row">               
                 <div class="col-md-7">
                   <div class="form-group">
-                    <label class="bmd-label-floating">Position applying for</label>
-                    <select class="form-control" formControlName="positionfor" placeholder="Position applying for" id="sel1">
+                    <select class="form-control" formControlName="position" placeholder="Position applying for" id="sel1">
+                      <option value="">Position applying for</option>
                       <option value="">Finance Officer</option>
                       <option value="">Systems Engineer</option>
                       <option value="">Software Developer</option>
@@ -82,54 +31,101 @@
                 </div>
               </div>
               <div class="row">
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text"  id="firstname" formControlName="last_name" placeholder="Firstname"  class="form-control">
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" id="lastname" formControlName="first_name" placeholder="Lastname" class="form-control">
+                  </div>
+                </div> 
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <input type="text" id="raddress" formControlName="res_address" placeholder="Residencial Address" class="form-control">
+                  </div>
+                </div>           
+              </div> -->
+
+              <!-- <div class="row">
                 <div class="col-md-6">
                   <div class="form-group">
-                    <!-- <label class="bmd-label-floating">last name</label> -->
-                    <input type="text"  id="firstname" formControlName="lname" placeholder="Firstname"  class="form-control">
+                    <input type="text"  id="age" formControlName="age" placeholder="Age" class="form-control">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <!-- <label class="bmd-label-floating">first name</label> -->
-                    <input type="text" id="lastname" formControlName="fname" placeholder="Lastname" class="form-control">
+                    <label class="bmd-label-floating">Gender</label>
+                    <select class="form-control"  formControlName="gender" placeholder="Gender" id="sel1">
+                      <option value="">Gender</option>
+                      <option value="female">Female</option>
+                      <option value="male">Male</option>
+                    </select>
                   </div>
                 </div>            
-              </div>
+              </div> -->
 
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-4">
                   <div class="form-group">
-                    <!-- <label class="bmd-label-floating">Home Address</label> -->
-                    <input type="text" id="haddress" formControlName="had" placeholder="Home Address" class="form-control">
+                    <input type="text" id="paddress" formControlName="postal_address" placeholder="Postal Address" class="form-control">
                   </div>
                 </div>
 
                 <div class="col-md-4">
                     <div class="form-group">
-                      <!-- <label class="bmd-label-floating">Digital Address</label> -->
-                      <input type="text" id="haddress" formControlName="dad" placeholder="Digital Address" class="form-control">
+                      <input type="text" id="haddress" formControlName="digital_address" placeholder="Digital Address" class="form-control">
                     </div>
                   </div>
 
                 <div class="col-md-4">
                   <div class="form-group">
-                    <!-- <label class="bmd-label-floating">Phone eg. +233...</label> -->
-                      <input type="text" formControlName="phne" class="form-control" placeholder="Phone eg. +233...">
-                      <h5 *ngIf="personadetail.get('phne').hasError('pattern')">Enter a valid number</h5>
+                      <input type="text" formControlName="phone" class="form-control" placeholder="Phone eg. +233...">
+                      <h5 *ngIf="personadetail.get('phone').hasError('pattern')">Enter a valid number</h5>
                   </div>
                 </div>
               </div>
-            
+
+<br><br> -->
+<!-- to upload files starts from here -->
+
+            <!-- <div class="row">
+              <div class="col-md-4">
+                <div class="">
+                  <label class="bmd-label-floating" for="cv">Upload CV</label>
+                  <input type="file" id="cv"  accept="pdf/*" (change)="onSelectFileCV($event)" class="hidden" >
+                </div>
+              </div>
+
+              <div class="col-md-4">
+                  <div class="">
+                    <label class="bmd-label-floating" for="cert">Upload Certificate </label>
+                    <input type="file" id="cert"  accept="pdf/*" (change)="onSelectFileCert($event)" class="hidden">
+                  </div>
+                </div>
+
+              <div class="col-md-4">
+                <div class="">
+                  <label class="bmd-label-floating" for="photo">Upload photo</label>
+                    <input type="file"  id="photo" accept="pdf/*" (change)="onSelectFilePhoto($event)"class="hidden">
+                </div>
+              </div>
+            </div> -->
+
+            <!-- uploading of multiple files ends here -->
+
+<!--             
               <br><br>
               <div class="row">
                 <div class="col-md-12">
-                <div class="forma-control">
-                <textarea name="" formControlName="aboutu" id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
+                <div class="forma-control" align="center">
+                <textarea name="" formControlName="description"  id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
                   </div>
                 </div>
               </div>
               <br><br><br>
-              <button type="submit" class="btn btn-danger btn-sm" [disabled]="!personadetail.valid" (click)="submitall()">Submit your information
+              <button type="submit" class="btn btn-danger btn-sm"[disabled]="!personadetail.valid" (click)="submitall()">Submit your information
                   <i class="material-icons">double_arrow</i>
                 </button>
               <div class="clearfix"></div>
@@ -140,39 +136,181 @@
 
       <div class="col-md-2"></div>
      
-    </div>
+    </div> -->
 
 
 <!------------------------------ support flag exist here--------------- -->
 
 
-<!-- <div class="row" *ngIf="info"> 
-    <div class="col-md-3">
-       
-      </div>
-  <div class="col-md-6">
-    <div class="card">
+ 
+
+
+
+
+
+
+
+      <!-- End Navbar -->
+      <body>
+        <br><br>
       
-      <div class="card-body">
-       <h3 align="center">Enterprise Computing Career </h3>
-       <h5 align="center">Inquire from us by sending us a mail </h5>
-       <h5 align="center">
-          204 Pawpaw St. Comm. 6 
-          Tema, Greater Accra, Ghana.<br>
-          <a href="mailto:enquiries@entcomputing.com">hr@entcomputing.com</a> <br>
-          <a href="tel:+233387031918"> +233 50 604 5005</a>
-       </h5>
-       <p align="center" class="card-category">Make us aware of any Issues you face using this career Portal
+          <div class="content" >
+            <div class="container-fluid">
+              
+    
+              
+
+
+
+
+    <div class="row">
+      <div class="col-md-2">
+     
+        </div>
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header personal">
+          <h2 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h2>
+          <!-- <p class="card-category" Style="color:rgb(255, 255, 255);">Complete your Personal information</p> -->
+        </div>
+        <div class="card-body">
+          <form [formGroup]="personadetail">
+            <div class="row">
+              
+         
+              <div class="col-md-7">
+                <div class="form-group">
+                  <select class="form-control"  formControlName="position" placeholder="Position applying for" id="sel1">
+                    <!-- these values should come from db -->
+                    <option value="">Position applying for</option>
+                    <option value="finance officer">Finance Officer</option>
+                    <option value="systems engineer">Systems Engineer</option>
+                    <option value="software developer">Software Developer</option>
+                    <option value="sales executive">Sales Executive</option>
+                    <option value="human resource assistant">Human Resource Assistant</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating">first name</label> -->
+                  <input type="text"  id="firstname" formControlName="first_name" placeholder="First name" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating">last name</label> -->
+                  <input type="text" id="lastname" formControlName="last_name" placeholder="Last name" class="form-control">
+                </div>
+              </div>            
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating">Age</label> -->
+                  <input type="number"  id="firstname" formControlName="age" placeholder="Age" class="form-control">
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <select class="form-control"  formControlName="gender" placeholder="Gender" id="sel1">
+                    <option value="">Gender</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                  </select>
+                </div>
+              </div>            
+            </div>
+
+          <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating">Home Address</label> -->
+                  <input type="text" id="haddress" formControlName="res_address" placeholder="Residencial Address" class="form-control">
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                  <div class="form-group">
+                    <!-- <label class="bmd-label-floating">Postal Address</label> -->
+                    <input type="text" id="haddress" formControlName="postal_address" placeholder="Postal Address" class="form-control">
+                  </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating">Phone eg. +233...</label> -->
+                    <input type="text" formControlName="phone" class="form-control" placeholder="Phone eg. +233...">
+                    <h5 *ngIf="personadetail.get('phone').hasError('pattern')">Enter a valid number</h5>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <!-- <label class="bmd-label-floating">Digital Address</label> -->
+                  <input type="text" id="haddress" formControlName="digital_address" placeholder="Digital Address" class="form-control">
+                </div>
+            </div>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-4">
+                      <label class="bmd-label-floating" for="cv">Upload CV</label>
+                      <input type="file" id="cv"  accept="pdf/*" (change)="onSelectFileCV($event)" class="form-control">
+                  </div>
+
+                  <div class="col-md-4">
+                        <label class="bmd-label-floating" for="cert">Upload Certificate</label>
+                        <input type="file" id="cert"  accept="pdf/*" (change)="onSelectFileCert($event)" class="form-control">
+                    </div>
+
+              <div class="col-md-4">
+                    <label class="bmd-label-floating" for="photo">Upload photo *png</label>
+                  <input type="file"  id="photo" accept="pdf/*" (change)="onSelectFilePhoto($event)" class="form-control">
+              </div>
+            </div>
+            <br><br>
+            <div class="row">
+              <div class="col-md-12">
+              <div class="forma-control" align="center">
+              <textarea name="" formControlName="description" id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-danger btn-sm" [disabled]="!personadetail.valid" (click)="submitall()">Submit your information
+                <i class="material-icons text-info">double_arrow</i>
+              </button>
+            <div class="clearfix"></div>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
 
-  <div class="col-md-3">
+    <div class="col-md-2"></div>
    
   </div>
 
-</div>
- -->
+
+            
+    
+    
+            </div>
+          </div>
+         
+    </body>
+
+
+
+
+
+
+
+
+
 
  
 

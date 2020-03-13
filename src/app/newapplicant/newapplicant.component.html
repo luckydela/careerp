@@ -1,8 +1,8 @@
 <div class="content">
   <div class="container-fluid">
       <div class="row">
-<div class="col-md-1"></div>
-          <div class="col-md-10">
+<div class="col-md-0"></div>
+          <div class="col-md-12">
             <div class="card">
               <div class="card-header">
                 <h3 class="card-title " align="center">View Applicant</h3>
@@ -51,7 +51,15 @@
                             <td id="filecert" (click)="opendocument(applicnt.certificate_name)">{{applicnt.certificate_name}}</td>
                             <td id="filephoto" (click)="opendocument(applicnt.photo_name)">{{applicnt.photo_name}}</td> 
                             <td>{{applicnt.description}}</td>
-                            <td>{{applicnt.date_created}}</td>                 
+                            <td>{{applicnt.date_created}}</td>  
+                            <td>
+                              <button type="submit" class="btn btn-round btn-sm"  rel="tooltip" title="full view" (click)="Viewbtn(applicnt,i)">
+                                  <i class="material-icons">edit</i>
+                                full view
+                              </button>
+
+                            </td>                 
+               
                            </tr>
                       
                     </tbody>
@@ -61,7 +69,7 @@
             </div>
           </div>
 
-          <div class="col-md-1"></div>
+          <div class="col-md-0"></div>
         </div>
   </div>
 </div>

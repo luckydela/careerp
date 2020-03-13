@@ -15,32 +15,64 @@ export class UserdshComponent implements OnInit {
   persona:boolean = true;
   //info: boolean = false;
 
-  public userfile: any = File;
+  usercvfile:any;
+  usercertfile:any;
+  //userphotofile:any;
+  userphotofile: File =  null;
 
   userdata;
    personadetail: FormGroup;
   constructor(private router: Router, private service: ServiceService, private formbuilder: FormBuilder) {
     this.personadetail = this.formbuilder.group({
-      positionfor: new FormControl('',[Validators.required]),
-      lname: new FormControl('',[Validators.required]),
-      fname: new FormControl('',[Validators.required]),
-      had: new FormControl ('',[Validators.required]),
-      dad: new FormControl('',[Validators.required]),
-      phne: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
-     // cv: new FormControl('',[Validators.required]),
-      //cert: new FormControl('',[Validators.required]),
-      //photo: new FormControl('', [Validators.required]),
-      aboutu: new FormControl('', [Validators.required])
+      position: new FormControl('',[Validators.required]),
+      last_name: new FormControl('',[Validators.required]),
+      first_name: new FormControl('',[Validators.required]),
+      age: new FormControl ('',[Validators.required]),
+      gender: new FormControl('',[Validators.required]),
+      res_address: new FormControl('',[Validators.required]),
+      postal_address: new FormControl('',[Validators.required]),
+      digital_address: new FormControl('', [Validators.required]),
+      phone: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
+      description: new FormControl('', [Validators.required])
     })
 
    }
 
-   onSelectFile(event){
-     const file = event.target.files[0];
-     //console.log(file);
-     this.userfile = file;
-   }
 
+   onSelectFileCV(event){
+    let fileList: FileList = event.target.files;
+//    let file: File = fileList[0];
+//    this.usercvfile = file;
+
+
+const file = event.target.files.item(0)
+
+this.usercvfile = <File>event.target.files[0];
+
+
+  }
+
+  onSelectFileCert(event){
+    let fileList: FileList = event.target.files;
+    // let file: File = fileList[0];
+    // this.usercertfile = file;
+
+    const file = event.target.files.item(0)
+
+    this.usercertfile = <File>event.target.files[0];
+
+    
+}
+
+onSelectFilePhoto(event){
+  let fileList: FileList = event.target.files;
+  //let file: File = fileList[0];
+  //this.userphotofile = file;
+
+  const file = event.target.files.item(0)
+
+   this.userphotofile = <File>event.target.files[0];
+}
 
 
 
@@ -61,42 +93,50 @@ export class UserdshComponent implements OnInit {
 
   submitall(){
     if (this.personadetail.valid) {
-      const user = this.personadetail.value;
       const formData = new FormData();
-      formData.append('user', JSON.stringify(user));
-      formData.append('file', this.userfile);
+      formData.append('position', this.personadetail.value.position);
+      formData.append('first_name', this.personadetail.value.first_name);
+      formData.append('last_name', this.personadetail.value.last_name);
+      formData.append('age', this.personadetail.value.age);
+      formData.append('gender', this.personadetail.value.gender);
+      formData.append('res_address', this.personadetail.value.res_address);
+      formData.append('postal_address', this.personadetail.value.postal_address);
+      formData.append('digital_address', this.personadetail.value.digital_address);
+       formData.append('phone', this.personadetail.value.phone);
+      formData.append('images', this.usercvfile,this.usercvfile.name);
+      formData.append('images', this.usercertfile,this.usercertfile.name);
+      formData.append('images', this.userphotofile);
+      formData.append('description', this.personadetail.value.description);
+
+
       swal.showLoading()
-      this.service.submitApplication(user)
+      this.service.submitApplication(formData)
       .subscribe(response => {
-        //console.log(user);
+        //console.log(response);
         
         //swal.hideLoading()
         if (response['responseCode'] === '000') {
           this.personadetail = this.formbuilder.group({
-            positionfor: new FormControl('',[Validators.required]),
-            lname: new FormControl('',[Validators.required]),
-            fname: new FormControl('',[Validators.required]),
-            had: new FormControl ('',[Validators.required]),
-            dad: new FormControl('',[Validators.required]),
-            phne: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
-            //cv: new FormControl('',[Validators.required]),
-            //cert: new FormControl('',[Validators.required]),
-            //photo: new FormControl('', [Validators.required]),
-            aboutu: new FormControl('', [Validators.required])
+            position: new FormControl('',[Validators.required]),
+            last_name: new FormControl('',[Validators.required]),
+            first_name: new FormControl('',[Validators.required]),
+            age: new FormControl ('',[Validators.required]),
+            gender: new FormControl('',[Validators.required]),
+            res_address: new FormControl('',[Validators.required]),
+            postal_address: new FormControl('',[Validators.required]),
+            digital_address: new FormControl('', [Validators.required]),
+            phone: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
+            description: new FormControl('', [Validators.required])
           })
+          this.router.navigate(['']);
           swal.fire("Success",response['responseMessage'], "success");
-          
         } else {
           swal.fire({
             title: 'Oops...',
             text: response['responseMessage'],
             footer: ''
           });
-        }
-
-        console.log(formData);
-        
-        
+        }        
       }, error => {
         swal.fire({
           title: 'Oops...',
@@ -112,10 +152,11 @@ export class UserdshComponent implements OnInit {
         footer: ''
       });
     }
-//this.persona = false;
+  this.persona = false;
 
 
   }
+
 
 
 }

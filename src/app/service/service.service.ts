@@ -69,7 +69,7 @@ export class ServiceService {
   }
 
   submitApplication(formData){
-return this.http.post(this.live_Url+'/api/submit_applications',formData, this.options)
+return this.http.post(this.live_Url+'/api/submit_applications',formData)
   }
 
   getApplicants(email){
