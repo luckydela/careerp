@@ -153,7 +153,7 @@
       <!-- End Navbar -->
       
         
-      
+      <body>
           <div class="content" >
             <div class="container-fluid">
               
@@ -161,10 +161,10 @@
               
 
     <div class="row">
-      <div class="col-md-2">
+      <div class="col-md-1 col-xs-0 col-xl-1 col-lg-1">
      
         </div>
-    <div class="col-md-8">
+    <div class="col-md-10 col-xs-12 col-xl-10 col-lg-10">
       <div class="card">
         <div class="card-header personal">
           <h2 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h2>
@@ -175,7 +175,7 @@
             <div class="row">
               
          
-              <div class="col-md-7">
+              <div class="col-md-7 col-xs-12 col-lg-7 col-xl-7" align="center">
                 <div class="form-group">
                   <select class="form-control"  formControlName="position" placeholder="Position applying for" id="sel1">
                     <!-- these values should come from db -->
@@ -190,13 +190,13 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">first name</label> -->
                   <input type="text"  id="firstname" formControlName="first_name" placeholder="First name" class="form-control">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">last name</label> -->
                   <input type="text" id="lastname" formControlName="last_name" placeholder="Last name" class="form-control">
@@ -204,13 +204,13 @@
               </div>            
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Age</label> -->
                   <input type="number"  id="firstname" formControlName="age" placeholder="Age" class="form-control">
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <select class="form-control"  formControlName="gender" placeholder="Gender" id="sel1">
                     <option value="">Gender</option>
@@ -222,14 +222,14 @@
             </div>
 
           <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Home Address</label> -->
                   <input type="text" id="haddress" formControlName="res_address" placeholder="Residencial Address" class="form-control">
                 </div>
               </div>
 
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                   <div class="form-group">
                     <!-- <label class="bmd-label-floating">Postal Address</label> -->
                     <input type="text" id="haddress" formControlName="postal_address" placeholder="Postal Address" class="form-control">
@@ -237,14 +237,14 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Phone eg. +233...</label> -->
                     <input type="text" formControlName="phone" class="form-control" placeholder="Phone eg. +233...">
                     <h5 *ngIf="personadetail.get('phone').hasError('pattern')">Enter a valid number</h5>
                 </div>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Digital Address</label> -->
                   <input type="text" id="haddress" formControlName="digital_address" placeholder="Digital Address" class="form-control">
@@ -254,24 +254,24 @@
 
             <div class="row">
 
-                <div class="col-md-4">
+                <div class="col-md-4 col-xs-12 col-xl-4 col-lg-4">
                       <label class="bmd-label-floating" for="cv">Upload CV</label>
                       <input type="file" id="cv"  accept="pdf/*" (change)="onSelectFileCV($event)" class="form-control">
                   </div>
 
-                  <div class="col-md-4">
+                  <div class="col-md-4 col-xs-12 col-xl-4 col-lg-4">
                         <label class="bmd-label-floating" for="cert">Upload Certificate</label>
                         <input type="file" id="cert"  accept="pdf/*" (change)="onSelectFileCert($event)" class="form-control">
                     </div>
 
-              <div class="col-md-4">
+              <div class="col-md-4 col-xs-12 col-xl-4 col-lg-4">
                     <label class="bmd-label-floating" for="photo">Upload photo *png</label>
                   <input type="file"  id="photo" accept="pdf/*" (change)="onSelectFilePhoto($event)" class="form-control">
               </div>
             </div>
             <br><br>
             <div class="row">
-              <div class="col-md-12">
+              <div class="col-md-12 col-xs-12 col-lg-12 col-xl-12">
               <div class="forma-control" align="center">
               <textarea name="" formControlName="description" id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
                 </div>
@@ -287,9 +287,10 @@
       </div>
     </div>
 
-    <div class="col-md-2"></div>
+    <div class="col-md-1 col-xs-0 col-xl-1 col-lg-1"></div>
    
   </div>
+  
 
 
             
@@ -297,6 +298,7 @@
     
             </div>
           </div>
+          </body>
          
     
 
