@@ -34,8 +34,8 @@ opendocument(documentname:any){
   window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
 }
 
-Viewbtn(){
+// Viewbtn(){
   
-}
+// }
 
 }

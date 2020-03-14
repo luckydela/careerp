@@ -17,13 +17,43 @@
     margin-right: 300px;
     margin-left: 300px;
 } */
+input{
+    text-transform: uppercase;
+}
+option{
+    text-transform: uppercase; 
+    text-align:center;
+    /* margin-left: 150px; */
 
+}
+
+select{
+    text-transform: uppercase;
+    width: 250px;
+    height: 30px;
+    text-align:center;
+    background: #0a161b;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+    
+}
 .btn{
     margin-left: 370px;
     margin-right: 370px;
+    background: #22aaee;
+    border-radius: 10px;
 
 }
 #aboutu{
     border-radius: 5px;
 }
 
+textarea{
+    border-color:#0a161b 2px;
+    background:#e5e9eb;
+    font-size: 13px;    
+}
+
+.modal{
+    margin-top: 100%;
+}

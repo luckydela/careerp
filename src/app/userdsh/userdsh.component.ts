@@ -31,7 +31,7 @@ export class UserdshComponent implements OnInit {
       gender: new FormControl('',[Validators.required]),
       res_address: new FormControl('',[Validators.required]),
       postal_address: new FormControl('',[Validators.required]),
-      digital_address: new FormControl('', [Validators.required]),
+       digital_address: [''],
       phone: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
       description: new FormControl('', [Validators.required])
     })
@@ -41,12 +41,7 @@ export class UserdshComponent implements OnInit {
 
    onSelectFileCV(event){
     let fileList: FileList = event.target.files;
-//    let file: File = fileList[0];
-//    this.usercvfile = file;
-
-
 const file = event.target.files.item(0)
-
 this.usercvfile = <File>event.target.files[0];
 
 
@@ -54,11 +49,7 @@ this.usercvfile = <File>event.target.files[0];
 
   onSelectFileCert(event){
     let fileList: FileList = event.target.files;
-    // let file: File = fileList[0];
-    // this.usercertfile = file;
-
     const file = event.target.files.item(0)
-
     this.usercertfile = <File>event.target.files[0];
 
     
@@ -66,11 +57,7 @@ this.usercvfile = <File>event.target.files[0];
 
 onSelectFilePhoto(event){
   let fileList: FileList = event.target.files;
-  //let file: File = fileList[0];
-  //this.userphotofile = file;
-
   const file = event.target.files.item(0)
-
    this.userphotofile = <File>event.target.files[0];
 }
 
@@ -78,17 +65,6 @@ onSelectFilePhoto(event){
 
   ngOnInit() {
     this.userdata=JSON.parse(localStorage.getItem('userdata'));
-  }
-
-
-  applyecl(){
-    this.persona = true
-    //this.info = false
-  }
-
-  contacthr(){
-    //this.info = true;
-    this.persona = false;
   }
 
   submitall(){
@@ -112,7 +88,7 @@ onSelectFilePhoto(event){
       swal.showLoading()
       this.service.submitApplication(formData)
       .subscribe(response => {
-        //console.log(response);
+        console.log(response);
         
         //swal.hideLoading()
         if (response['responseCode'] === '000') {
@@ -124,16 +100,17 @@ onSelectFilePhoto(event){
             gender: new FormControl('',[Validators.required]),
             res_address: new FormControl('',[Validators.required]),
             postal_address: new FormControl('',[Validators.required]),
-            digital_address: new FormControl('', [Validators.required]),
+             digital_address: new FormControl('',[Validators.required]),
             phone: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
             description: new FormControl('', [Validators.required])
           })
           this.router.navigate(['']);
           swal.fire("Success",response['responseMessage'], "success");
-        } else {
+        } else
+        if(response['responseCode']==='E01') {
           swal.fire({
             title: 'Oops...',
-            text: response['responseMessage'],
+            text: 'Application Unsuccessful!...Check and Try again..',
             footer: ''
           });
         }        
@@ -145,14 +122,14 @@ onSelectFilePhoto(event){
         });
         swal.hideLoading()
       })
-    } else {
+     }else {
       swal.fire({
         title: 'Oops...',
         text: 'Please fill all form fields',
         footer: ''
       });
     }
-  this.persona = false;
+  // this.persona = false;
 
 
   }

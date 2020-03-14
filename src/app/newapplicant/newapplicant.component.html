@@ -1,7 +1,8 @@
 <div class="content">
   <div class="container-fluid">
       <div class="row">
-<div class="col-md-0"></div>
+<!-- <div class="col-md-0"></div> -->
+
           <div class="col-md-12">
             <div class="card">
               <div class="card-header">
@@ -22,16 +23,16 @@
                       <th>ID</th>
                       <th>Firstname</th>
                       <th>Lastname</th>
-                      <th>Age</th>
+                      <!-- <th>Age</th> -->
                       <th>Gender</th>
-                      <th>Res.Address</th>
+                      <!-- <th>Res.Address</th> -->
                       <!-- <th>P.Address</th> -->
-                      <th>Dg.Address</th>
+                      <!-- <th>Dg.Address</th> -->
                       <th>PhoneNo.</th>
                       <th>CV</th>
                       <th>Cert</th>
                       <th>Photo</th>
-                      <th>Dcsp</th>
+                      <th>Description</th>
                       <th>DateCreated</th>
                     </thead>
                     <tbody>
@@ -41,11 +42,11 @@
                             <td>{{applicnt.user_id}}</td>
                             <td>{{applicnt.first_name}}</td>
                             <td>{{applicnt.last_name}}</td>
-                            <td>{{applicnt.age}}</td>
+                            <!-- <td>{{applicnt.age}}</td> -->
                             <td>{{applicnt.gender}}</td>
-                            <td>{{applicnt.res_address}}</td>
+                            <!-- <td>{{applicnt.res_address}}</td> -->
                             <!-- <td>{{applicnt.postal_address}}</td> -->
-                            <td>{{applicnt.digital_address}}</td>
+                            <!-- <td>{{applicnt.digital_address}}</td> -->
                             <td>{{applicnt.phone}}</td>
                             <td id="filecv" (click)="opendocument(applicnt.cv_name)">{{applicnt.cv_name}}</td> 
                             <td id="filecert" (click)="opendocument(applicnt.certificate_name)">{{applicnt.certificate_name}}</td>
@@ -53,14 +54,40 @@
                             <td>{{applicnt.description}}</td>
                             <td>{{applicnt.date_created}}</td>  
                             <td>
-                              <button type="submit" class="btn btn-round btn-sm"  rel="tooltip" title="full view" (click)="Viewbtn(applicnt,i)">
+                              <button type="submit" class="btn btn-round btn-sm"   rel="tooltip" title="full view" data-toggle="modal" (click)="myModal" data-target="#myModal">
                                   <i class="material-icons">edit</i>
                                 full view
                               </button>
 
-                            </td>                 
+
+                                          <!-- The Modal -->
+                    <div class="modal fade" id="myModal">
+                      <div class="modal-dialog modal-lg modal-dialog-centered">
+                        <div class="modal-content">
+
+                          <!-- Modal Header -->
+                          <div class="modal-header">
+                            <h4 class="card-title" align="center">Applicant Full Detail</h4>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          </div>
+
+                          <!-- Modal body -->
+                          <div class="modal-body">
+                            User information goes here
+                          </div>
+
+                          <!-- Modal footer -->
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+
+            </td>                 
                
-                           </tr>
+                  </tr>
                       
                     </tbody>
                   </table>
@@ -69,7 +96,14 @@
             </div>
           </div>
 
-          <div class="col-md-0"></div>
         </div>
+
+
+
+
+
+
   </div>
 </div>
+
+

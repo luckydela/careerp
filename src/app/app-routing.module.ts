@@ -10,6 +10,8 @@ import {AdminnavComponent} from './adminnav/adminnav.component';
 import {NewapplicantComponent} from './newapplicant/newapplicant.component';
 import { AddjobComponent } from './addjob/addjob.component';
 import {LandingComponent} from './landing/landing.component';
+import { CppliedComponent } from './cpplied/cpplied.component'
+
 
 
 
@@ -30,6 +32,7 @@ const routes: Routes = [
       {path: 'adminuser@ecl', component: NewapplicantComponent},
       {path:'profile', component: ProfileComponent},
       {path:'addjob',  component:AddjobComponent },
+      {path:'capplied', component: CppliedComponent}
                  
     ]
 },
@@ -44,5 +47,5 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 export const routeComponent = [LandingComponent,DptComponent, LoginComponent,TopnavComponent, AdminnavComponent,
-    ProfileComponent, UserdshComponent, NewapplicantComponent, AddjobComponent
+    ProfileComponent, UserdshComponent, NewapplicantComponent, AddjobComponent, CppliedComponent
    ]

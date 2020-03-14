@@ -16,6 +16,10 @@ export class AdminnavComponent implements OnInit {
   ngOnInit() {
   }
 
+  currentapplicant(){
+    this.router.navigate(['/capplied'])
+  }
+
   newApplicant(){
     this.router.navigate(['/adminuser@ecl'])
   }

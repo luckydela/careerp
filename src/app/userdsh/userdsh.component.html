@@ -1,165 +1,7 @@
-
-      <!-- End Navbar -->
-      
-<!--       
-           <div class="content" >
-            <div class="container-fluid">
-
-    <div class="row" *ngIf="persona">
-        <div class="col-md-2">
-       
-          </div>
-      <div class="col-md-8">
-        <div class="card">
-          <div class="card-header ">
-            <h2 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h2>
-          </div>
-          <div class="card-body">
-            <form [formGroup]="personadetail">
-              <div class="row">               
-                <div class="col-md-7">
-                  <div class="form-group">
-                    <select class="form-control" formControlName="position" placeholder="Position applying for" id="sel1">
-                      <option value="">Position applying for</option>
-                      <option value="">Finance Officer</option>
-                      <option value="">Systems Engineer</option>
-                      <option value="">Software Developer</option>
-                      <option value="">Sales Executive</option>
-                      <option value="">Human Resource Assistant</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text"  id="firstname" formControlName="last_name" placeholder="Firstname"  class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text" id="lastname" formControlName="first_name" placeholder="Lastname" class="form-control">
-                  </div>
-                </div> 
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text" id="raddress" formControlName="res_address" placeholder="Residencial Address" class="form-control">
-                  </div>
-                </div>           
-              </div> -->
-
-              <!-- <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <input type="text"  id="age" formControlName="age" placeholder="Age" class="form-control">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="bmd-label-floating">Gender</label>
-                    <select class="form-control"  formControlName="gender" placeholder="Gender" id="sel1">
-                      <option value="">Gender</option>
-                      <option value="female">Female</option>
-                      <option value="male">Male</option>
-                    </select>
-                  </div>
-                </div>            
-              </div> -->
-
-            <!-- <div class="row">
-                <div class="col-md-4">
-                  <div class="form-group">
-                    <input type="text" id="paddress" formControlName="postal_address" placeholder="Postal Address" class="form-control">
-                  </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="form-group">
-                      <input type="text" id="haddress" formControlName="digital_address" placeholder="Digital Address" class="form-control">
-                    </div>
-                  </div>
-
-                <div class="col-md-4">
-                  <div class="form-group">
-                      <input type="text" formControlName="phone" class="form-control" placeholder="Phone eg. +233...">
-                      <h5 *ngIf="personadetail.get('phone').hasError('pattern')">Enter a valid number</h5>
-                  </div>
-                </div>
-              </div>
-
-<br><br> -->
-<!-- to upload files starts from here -->
-
-            <!-- <div class="row">
-              <div class="col-md-4">
-                <div class="">
-                  <label class="bmd-label-floating" for="cv">Upload CV</label>
-                  <input type="file" id="cv"  accept="pdf/*" (change)="onSelectFileCV($event)" class="hidden" >
-                </div>
-              </div>
-
-              <div class="col-md-4">
-                  <div class="">
-                    <label class="bmd-label-floating" for="cert">Upload Certificate </label>
-                    <input type="file" id="cert"  accept="pdf/*" (change)="onSelectFileCert($event)" class="hidden">
-                  </div>
-                </div>
-
-              <div class="col-md-4">
-                <div class="">
-                  <label class="bmd-label-floating" for="photo">Upload photo</label>
-                    <input type="file"  id="photo" accept="pdf/*" (change)="onSelectFilePhoto($event)"class="hidden">
-                </div>
-              </div>
-            </div> -->
-
-            <!-- uploading of multiple files ends here -->
-
-<!--             
-              <br><br>
-              <div class="row">
-                <div class="col-md-12">
-                <div class="forma-control" align="center">
-                <textarea name="" formControlName="description"  id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
-                  </div>
-                </div>
-              </div>
-              <br><br><br>
-              <button type="submit" class="btn btn-danger btn-sm"[disabled]="!personadetail.valid" (click)="submitall()">Submit your information
-                  <i class="material-icons">double_arrow</i>
-                </button>
-              <div class="clearfix"></div>
-            </form>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-md-2"></div>
-     
-    </div> -->
-
-
-<!------------------------------ support flag exist here--------------- -->
-
-
- 
-
-
-
-
-
-
-
-      <!-- End Navbar -->
-      
         
-      <!-- <body> -->
           <div class="content" >
             <div class="container-fluid">
               
-    
-              
-
     <div class="row">
       <div class="col-md-1 col-xs-0 col-xl-1 col-lg-1">
      
@@ -167,19 +9,18 @@
     <div class="col-md-10 col-xs-12 col-xl-10 col-lg-10">
       <div class="card">
         <div class="card-header personal">
-          <h2 class="card-title" Style="color:rgb(66, 155, 245); text-transform: 20px;" align="center">Personal Information Profile</h2>
-          <!-- <p class="card-category" Style="color:rgb(255, 255, 255);">Complete your Personal information</p> -->
+          <h3 class="card-title" Style="color:#0a161b; text-transform: 20px;" align="center">Personal Information Profile</h3>
         </div>
         <div class="card-body">
           <form [formGroup]="personadetail">
             <div class="row">
               
          
-              <div class="col-md-7 col-xs-12 col-lg-7 col-xl-7" align="center">
+              <div class="col-md-6 col-xs-12 col-lg-6 col-xl-6" align="center">
                 <div class="form-group">
-                  <select class="form-control"  formControlName="position" placeholder="Position applying for" id="sel1">
+                  <select class=""  formControlName="position" placeholder="  Position applying for *   " required>
                     <!-- these values should come from db -->
-                    <option value="">Position applying for</option>
+                    <option value="">  Position applying for *</option>
                     <option value="finance officer">Finance Officer</option>
                     <option value="systems engineer">Systems Engineer</option>
                     <option value="software developer">Software Developer</option>
@@ -193,13 +34,13 @@
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">first name</label> -->
-                  <input type="text"  id="firstname" formControlName="first_name" placeholder="First name" class="form-control">
+                  <input type="text"  id="firstname" formControlName="first_name" placeholder="First name *" class="" required>
                 </div>
               </div>
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">last name</label> -->
-                  <input type="text" id="lastname" formControlName="last_name" placeholder="Last name" class="form-control">
+                  <input type="text" id="lastname" formControlName="last_name" placeholder="Last name *" class="" required>
                 </div>
               </div>            
             </div>
@@ -207,13 +48,13 @@
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Age</label> -->
-                  <input type="number"  id="firstname" formControlName="age" placeholder="Age" class="form-control">
+                  <input type="number"  id="firstname" formControlName="age" placeholder="Age *" class="" required>
                 </div>
               </div>
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
-                  <select class="form-control"  formControlName="gender" placeholder="Gender" id="sel1">
-                    <option value="">Gender</option>
+                  <select class=""  formControlName="gender" placeholder="  Gender *  " required>
+                    <option value=""> Gender *  </option>
                     <option value="female">Female</option>
                     <option value="male">Male</option>
                   </select>
@@ -225,14 +66,14 @@
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Home Address</label> -->
-                  <input type="text" id="haddress" formControlName="res_address" placeholder="Residencial Address" class="form-control">
+                  <input type="text" id="raddress" formControlName="res_address" placeholder="Residencial Address *" class="" required>
                 </div>
               </div>
 
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                   <div class="form-group">
                     <!-- <label class="bmd-label-floating">Postal Address</label> -->
-                    <input type="text" id="haddress" formControlName="postal_address" placeholder="Postal Address" class="form-control">
+                    <input type="text" id="paddress" formControlName="postal_address" placeholder="Postal Address *" class="" required>
                   </div>
               </div>
             </div>
@@ -240,45 +81,46 @@
               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Phone eg. +233...</label> -->
-                    <input type="text" formControlName="phone" class="form-control" placeholder="Phone eg. +233...">
+                    <input type="text" formControlName="phone" class="" placeholder="Phone eg. +233... *" required>
                     <h5 *ngIf="personadetail.get('phone').hasError('pattern')">Enter a valid number</h5>
                 </div>
               </div>
-              <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
+               <div class="col-md-6 col-xs-12 col-xl-6 col-lg-6">
                 <div class="form-group">
                   <!-- <label class="bmd-label-floating">Digital Address</label> -->
-                  <input type="text" id="haddress" formControlName="digital_address" placeholder="Digital Address" class="form-control">
+                 <input type="text" formControlName="digital_address" placeholder="Digital Address" class="">
                 </div>
-            </div>
+            </div> 
             </div>
 
             <div class="row">
 
                 <div class="col-md-4 col-xs-12 col-xl-4 col-lg-4">
-                      <label class="bmd-label-floating" for="cv">Upload CV</label>
-                      <input type="file" id="cv"  accept="pdf/*" (change)="onSelectFileCV($event)" class="form-control">
+                      <label class="bmd-label-floating" for="cv">Upload CV. strictly pdf *</label>
+                      <input type="file" id="cv"  accept="pdf/*" (change)="onSelectFileCV($event)" class="form-control" required>
                   </div>
 
                   <div class="col-md-4 col-xs-12 col-xl-4 col-lg-4">
-                        <label class="bmd-label-floating" for="cert">Upload Certificate</label>
-                        <input type="file" id="cert"  accept="pdf/*" (change)="onSelectFileCert($event)" class="form-control">
+                        <label class="bmd-label-floating" for="cert">Upload Certificate. strictly pdf *</label>
+                        <input type="file" id="cert"  accept="pdf/*" (change)="onSelectFileCert($event)" class="form-control" required>
                     </div>
 
               <div class="col-md-4 col-xs-12 col-xl-4 col-lg-4">
-                    <label class="bmd-label-floating" for="photo">Upload photo *png</label>
-                  <input type="file"  id="photo" accept="pdf/*" (change)="onSelectFilePhoto($event)" class="form-control">
+                    <label class="bmd-label-floating" for="photo">Upload photo *png *</label>
+                  <input type="file"  id="photo" accept="pdf/*" (change)="onSelectFilePhoto($event)" class="form-control" required>
               </div>
             </div>
             <br><br>
             <div class="row">
               <div class="col-md-12 col-xs-12 col-lg-12 col-xl-12">
-              <div class="forma-control" align="center">
-              <textarea name="" formControlName="description" id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="80" rows="10"></textarea>
+              <div class="form-group" align="center">
+              <textarea name="" formControlName="description" class="" id="aboutu" placeholder="Introduce yourself to us. Who are you ?" cols="70" rows="8"></textarea>
                 </div>
               </div>
             </div>
+            <br>
 
-            <button type="submit" class="btn btn-danger btn-sm" [disabled]="!personadetail.valid" (click)="submitall()">Submit your information
+            <button type="submit" class="btn btn-sm" (click)="submitall()">Submit Application
                 <i class="material-icons text-info">double_arrow</i>
               </button>
             <div class="clearfix"></div>
@@ -291,14 +133,8 @@
    
   </div>
   
-
-
-            
-    
-    
-            </div>
-          </div>
-          <!-- </body> -->
+  </div>
+ </div>
          
     
 

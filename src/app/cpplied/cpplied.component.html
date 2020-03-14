@@ -1,0 +1,66 @@
+<div class="content">
+        <div class="container-fluid">
+            <div class="row">
+      <div class="col-md-0"></div>
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title " align="center">Today's Applicant</h3>
+                      <div class=" form-inline active-cyan active-cyan-2 md-form mt-0 search">
+                        <input class="form-control" type="text" placeholder="Search by Anything" #query (keyup)="search(query.value)" aria-label="Search">
+                      </div>
+                    </div>
+                    <div class="card-body">
+                       
+                      <div class="table-responsive">
+                        <table class="table">
+                          <thead class=" text">
+                            <th>#</th>
+                            <!-- <th>ID</th> -->
+                            <th>Firstname</th>
+                            <th>Lastname</th>
+                            <th>Gender</th>
+                            <th>PhoneNo.</th>
+                            <th>CV</th>
+                            <th>Cert</th>
+                            <!-- <th>Photo</th> -->
+                            <th>Description</th>
+                            <!-- <th>DateCreated</th> -->
+                          </thead>
+                          <tbody>
+                               <tr *ngFor="let applicnt of searchdata ; let i=index;" >
+                                
+                                  <td>{{i+1}}</td>
+                                  <!-- <td>{{applicnt.user_id}}</td> -->
+                                  <td>{{applicnt.first_name}}</td>
+                                  <td>{{applicnt.last_name}}</td>
+                                  <td>{{applicnt.gender}}</td>
+                                  <td>{{applicnt.phone}}</td>
+                                  <td id="filecv" (click)="opendocument(applicnt.cv_name)">{{applicnt.cv_name}}</td> 
+                                  <td id="filecert" (click)="opendocument(applicnt.certificate_name)">{{applicnt.certificate_name}}</td>
+                                  <!-- <td id="filephoto" (click)="opendocument(applicnt.photo_name)">{{applicnt.photo_name}}</td>  -->
+                                  <td>{{applicnt.description}}</td>
+                                  <!-- <td>{{applicnt.date_created}}</td>   -->
+                                  <td>
+                                    <button type="submit" class="btn btn-round btn-sm"  rel="tooltip" title="full view" (click)="Viewbtn(applicnt,i)">
+                                        <i class="material-icons">edit</i>
+                                      full view
+                                    </button>
+      
+                                  </td>                 
+                     
+                                 </tr>
+                            
+                          </tbody>
+
+                        </table>
+                        <h4 class="card-title " align="center" *ngIf="dailystatus">None Applied Today</h4>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+              </div>
+        </div>
+      </div>
