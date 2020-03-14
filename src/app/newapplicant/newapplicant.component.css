@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #filecv {
     cursor: pointer;
     color: rgb(214, 9, 241);
@@ -23,3 +24,9 @@ h3{
 .moda.show{
     display:block;
 }
+=======
+#file {
+    cursor: pointer;
+    color: blue;
+}
+>>>>>>> 59ca6068d6c55809333ee7dc4b9fe17839c6f47e

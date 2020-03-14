@@ -29,6 +29,9 @@ export class NewapplicantComponent implements OnInit {
 search (query: string){
  this.searchdata = (query) ?this.applicant.filter( data => data.user_id.toLowerCase().includes(query.toLowerCase()) ||data.last_name.toLowerCase().includes(query.toLowerCase()) ||data.first_name.toLowerCase().includes(query.toLowerCase()) ||data.gender.toLowerCase().includes(query.toLowerCase()) || data.phone.toLowerCase().includes(query.toLowerCase()) || data.cv_name.toUpperCase().includes(query.toUpperCase())) : this.applicant;
 }
+opendocument(documentname:any){
+  window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
+}
 
 opendocument(documentname:any){
   window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
