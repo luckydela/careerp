@@ -12,6 +12,10 @@ export class NewapplicantComponent implements OnInit {
   userdata;
   applicant:any = [];
   searchdata;
+  
+  firstname:any;
+  lastname:any;
+  age:any
 
   constructor( public service: ServiceService, public router: Router) { }
 
@@ -33,12 +37,15 @@ opendocument(documentname:any){
   window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
 }
 
-opendocument(documentname:any){
-  window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
-}
-
-// Viewbtn(){
-  
+// opendocument(documentname:any){
+//   window.open('https://ecl-web-api.herokuapp.com/api/load-image/'+documentname)
 // }
+
+myModal(data:any){
+
+  this.firstname = data.first_name
+  this.lastname = data.last_name
+  this.age = data.age
+}
 
 }

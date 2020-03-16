@@ -48,50 +48,17 @@
                             <!-- <td>{{applicnt.postal_address}}</td> -->
                             <!-- <td>{{applicnt.digital_address}}</td> -->
                             <td>{{applicnt.phone}}</td>
-<<<<<<< HEAD
                             <td id="filecv" (click)="opendocument(applicnt.cv_name)">{{applicnt.cv_name}}</td> 
                             <td id="filecert" (click)="opendocument(applicnt.certificate_name)">{{applicnt.certificate_name}}</td>
                             <td id="filephoto" (click)="opendocument(applicnt.photo_name)">{{applicnt.photo_name}}</td> 
-=======
-                            <td id="file" (click)="opendocument(applicnt.cv_name)">{{applicnt.cv_name}}</td> 
-                            <td>{{applicnt.certificate_name}}</td>
-                            <td>{{applicnt.photo_name}}</td> 
->>>>>>> 59ca6068d6c55809333ee7dc4b9fe17839c6f47e
                             <td>{{applicnt.description}}</td>
                             <td>{{applicnt.date_created}}</td>  
                             <td>
-                              <button type="submit" class="btn btn-round btn-sm"   rel="tooltip" title="full view" data-toggle="modal" (click)="myModal" data-target="#myModal">
+                              <button type="submit" class="btn btn-round btn-sm"   rel="tooltip" title="full view" data-toggle="modal" (click)="myModal(applicnt)" data-target="#myModal">
                                   <i class="material-icons">edit</i>
                                 full view
                               </button>
-
-
-                                          <!-- The Modal -->
-                    <div class="modal fade" id="myModal">
-                      <div class="modal-dialog modal-lg modal-dialog-centered">
-                        <div class="modal-content">
-
-                          <!-- Modal Header -->
-                          <div class="modal-header">
-                            <h4 class="card-title" align="center">Applicant Full Detail</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          </div>
-
-                          <!-- Modal body -->
-                          <div class="modal-body">
-                            User information goes here
-                          </div>
-
-                          <!-- Modal footer -->
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                          </div>
-
-                        </div>
-                      </div>
-                    </div>
-
-            </td>                 
+                            </td>                 
                
                   </tr>
                       
@@ -103,13 +70,40 @@
           </div>
 
         </div>
-
-
-
-
-
-
   </div>
 </div>
 
+<!-- The MODAL goes here -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="card-title" align="center">Applicant Full Detail</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        User information goes here
+        <div>
+          Firstname:: {{ firstname }}
+        </div>
+        <div>
+          Lastname:: {{ lastname }}
+        </div>
+        <div>
+          Age:: {{ age }}
+        </div>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
