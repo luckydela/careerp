@@ -100,7 +100,7 @@ onSelectFilePhoto(event){
             gender: new FormControl('',[Validators.required]),
             res_address: new FormControl('',[Validators.required]),
             postal_address: new FormControl('',[Validators.required]),
-             digital_address: new FormControl('',[Validators.required]),
+             digital_address: new FormControl('',[]),
             phone: new FormControl('',Validators.compose([Validators.pattern(/^(\+233)[0-9]\d{8}$/),Validators.required])),
             description: new FormControl('', [Validators.required])
           })
