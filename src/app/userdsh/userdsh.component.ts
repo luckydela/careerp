@@ -41,8 +41,9 @@ export class UserdshComponent implements OnInit {
 
    onSelectFileCV(event){
     let fileList: FileList = event.target.files;
-const file = event.target.files.item(0)
-this.usercvfile = <File>event.target.files[0];
+    const file = event.target.files.item(0)
+    this.usercvfile = <File>event.target.files[0];
+   
 
 
   }
@@ -51,7 +52,7 @@ this.usercvfile = <File>event.target.files[0];
     let fileList: FileList = event.target.files;
     const file = event.target.files.item(0)
     this.usercertfile = <File>event.target.files[0];
-
+    console.log(this.usercertfile);
     
 }
 
@@ -59,6 +60,7 @@ onSelectFilePhoto(event){
   let fileList: FileList = event.target.files;
   const file = event.target.files.item(0)
    this.userphotofile = <File>event.target.files[0];
+   console.log(this.usercertfile);
 }
 
 
@@ -78,10 +80,10 @@ onSelectFilePhoto(event){
       formData.append('res_address', this.personadetail.value.res_address);
       formData.append('postal_address', this.personadetail.value.postal_address);
       formData.append('digital_address', this.personadetail.value.digital_address);
-       formData.append('phone', this.personadetail.value.phone);
-      formData.append('images', this.usercvfile,this.usercvfile.name);
-      formData.append('images', this.usercertfile,this.usercertfile.name);
-      formData.append('images', this.userphotofile);
+      formData.append('phone', this.personadetail.value.phone);
+      formData.append('images', this.usercvfile,this.personadetail.value.first_name+'_'+this.personadetail.value.last_name+'_CV.'+this.usercvfile.name.split('.')[1]);
+      formData.append('images', this.usercertfile,this.personadetail.value.first_name+'_'+this.personadetail.value.last_name+'_CERT.'+this.usercvfile.name.split('.')[1]);
+      formData.append('images', this.userphotofile,this.personadetail.value.first_name+'_'+this.personadetail.value.last_name+this.usercvfile.name.split('.')[1]);
       formData.append('description', this.personadetail.value.description);
 
 
